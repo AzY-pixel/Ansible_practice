@@ -3,7 +3,7 @@ pipeline{
   stages{  
       stage("Run ansible playbook"){
         steps{
-        ansiblePlaybook credentialsId: 'ssh-key', inventory: 'hosts', playbook: 'nginx_install.yaml'
+        ansiblePlaybook credentialsId: 'ssh-id', inventory: 'hosts', playbook: 'nginx_install.yaml'
         }
       }
   }
